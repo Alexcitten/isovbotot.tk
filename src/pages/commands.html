@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" href="../assets/main.png">
+    <title>iSovBot Commands</title>
+
+
+    <div class="jumbotron text-center bg-transparent">
+        <h1 class="commandstitle">Команды</h1>
+        <p class="lead commandssub">Функционал iSovBot<br><a href="https://alexcittenq.gitbook.io/isovbotdocs/ispolzovanie/mezhserver">Межсервер</a> </p>
+        <hr>
+        <input id="myInput" type="text" class="searchbox" placeholder="Найти команду..">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="border"></div>
+        <br>
+        <br>
+        <br>
+        <div id="myCmd">
+            <br>
+            <button type="button" class="collapsible">prefix<span> - Изменить префикс бота</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: aqua;">Управление, нужны права администратора</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!prefix</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!prefix желаемый префикс бота</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">help<span> - Посмотреть команды бота</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(19, 182, 160);">Основное</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!help</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!help-prefix (информация о команде)</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">interserver<span> - Информация межсервера, <a href="https://alexcittenq.gitbook.io/isovbotdocs/ispolzovanie/mezhserver">но тут её больше.</a> </span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(19, 182, 160);">Основное</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!Interserver</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">addinterserver<span> - Установить межсервер</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(242, 44, 232);">Межсервер, нужны права администратора</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!addinterserver</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!addinterserver {channelID}</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">delinter<span> - Удалить межсервер</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(242, 44, 232);">Межсервер, нужны права администратора</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!delinter</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!delinter</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">intercolor<span> - Сменить цвет эмбеда</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(242, 44, 232);">Межсервер, нужны права администратора</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!intercolor ЦВЕТ</p>
+                <h4 style="color: #cccccc;">Доступные цвета:</h4>
+                <p>RED, ORANGE, YELLOW, GREEN, BLUE, PURPLE <br> #FF0000, #FFA500, #FFFF00, #00FF00, #0000FF, #6A0DAD </p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">interuser<span> - Настройка ID пользователей</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(242, 44, 232);">Межсервер, нужны права администратора</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!interuser</p>
+                <h4 style="color: #cccccc;">Подробнее:</h4>
+                <p>Показывает ID отправителей в футере эмбеда межсервера, чтоб отключить это - пропишите команду повторно</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">interguild<span> - Настройка ID серверов</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(242, 44, 232);">Межсервер, нужны права администратора</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!interguild</p>
+                <h4 style="color: #cccccc;">Подробнее:</h4>
+                <p>Показывает ID серверов в футере эмбеда межсервера, чтоб отключить это - пропишите команду повторно</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">intertags<span> - Настройка тегов пользователей</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(242, 44, 232);">Межсервер, нужны права администратора</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!intertags</p>
+                <h4 style="color: #cccccc;">Подробнее:</h4>
+                <p>Не показывает теги пользователей межсервера, чтоб отключить это - пропишите команду повторно</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">blacklist<span> - Чёрный список сервера</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(242, 44, 232);">Межсервер, нужны права администратора</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!blacklist ID пользователя</p>
+                <h4 style="color: #cccccc;">Подробнее:</h4>
+                <p>Вы можете добавить пользователя в чёрный список сервера, его сообщения не будут отображаться на сервере в межсервере</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">meme<span> - Русские мемы</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(67, 245, 156);">Картинки</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!meme</p>
+                <h4 style="color: #cccccc;">Подробнее:</h4>
+                <p>В мемах возможна нецензурная лексика, и пошлый юмор.</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">magik<span> - Жмыхнуть картинку</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(67, 245, 156);">Картинки</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!magik</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!magik или s!magik @упоминание или s!magik (картинка)</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">phcomment<span> - Комментарий на прон сайте</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(67, 245, 156);">Картинки</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!phcomment</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!phcomment (текст) | В команде нет NSFW но не заходите на тот самый сайт если вам меньше 18 лет.</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">avatar<span> - Просмотр аватарки</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(67, 245, 156);">Картинки</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!avatar</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!avatar @упоминание</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">triggered<span> - Триггер </span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(67, 245, 156);">Картинки</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!triggered</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!triggered @упоминание</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">gay<span> - Добавление радуги на аватар </span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(67, 245, 156);">Картинки</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!gay</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!gay @упоминание</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">glass<span> - Стекло на аватарке? </span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(67, 245, 156);">Картинки</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!glass</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!glass @упоминание</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">brightness<span> - Увеличить яркость на аватарке </span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(67, 245, 156);">Картинки</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!brightness</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!brightness @упоминание</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">blur<span> - Мутная аватарка </span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(67, 245, 156);">Картинки</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!blur</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!blur @упоминание</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">pixel<span> - Цензура аватарки </span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(67, 245, 156);">Картинки</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!pixel</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!pixel @упоминание</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">wasted<span> - Потрачено.. </span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(67, 245, 156);">Картинки</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!wasted</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!wasted @упоминание</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">animeface<span> - Аниме лицо UwU </span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(67, 245, 156);">Картинки</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!animeface</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!animeface @упоминание</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">captcha<span> - Пройдите капчу!</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(67, 245, 156);">Картинки</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!captcha</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!captcha @упоминание</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">invert<span> - Инверсия цвета </span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(67, 245, 156);">Картинки</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!invert</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!invert @упоминание</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">invertgreyscale<span> - Инверсия цветов + оттенки серого </span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(67, 245, 156);">Картинки</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!invertgreyscale</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!invertgreyscale @упоминание</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">greyscale<span> - Оттенки серого </span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(67, 245, 156);">Картинки</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!greyscale</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!greyscale @упоминание</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">porf<span> - <a href="https://porfirevich.ru/">Порфирьевич</a> но это в Discord</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(255, 47, 10);">Мини-игры</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!porf</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!porf (текст), полная документация <a href="https://alexcittenq.gitbook.io/isovbotdocs/ispolzovanie/porfirevich">тут</a></p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">addlogs<span> - Установить <a href="https://alexcittenq.gitbook.io/isovbotdocs/ispolzovanie/logirovanie-deistvii">логирование действий</a></span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(40, 173, 7);">Логирование действий</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!addlogs</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!addlogs #канал</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">dellogs<span> - Удалить <a href="https://alexcittenq.gitbook.io/isovbotdocs/ispolzovanie/logirovanie-deistvii">логирование действий</a></span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(40, 173, 7);">Логирование действий</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!dellogs</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!dellogs #канал</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">warn<span> - Выдать предупреждение </span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(242, 245, 67);">Управление, нужны права администратора</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!warn</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!warn @упоминание (причина) | <a href="https://alexcittenq.gitbook.io/isovbotdocs/ispolzovanie/moderaciya">полная документация</a></p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">unwarn<span> - Снять предупреждение </span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(242, 245, 67);">Управление, нужны права администратора</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!unwarn</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!unwarn @упоминание (причина) | <a href="https://alexcittenq.gitbook.io/isovbotdocs/ispolzovanie/moderaciya">полная документация</a></p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">warns<span> - Посмотреть предупреждения </span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(242, 245, 67);">Управление</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!warns</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!warns @упоминание</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">levelsystem<span> - Отключить систему уровней </span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(155, 88, 0);">Система уровней, нужны права администратора</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!levelsystem</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!levelsystem | Чтоб включить - повторно пропишите команду</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">bio<span> - Установить свою биографию</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(155, 88, 0);">Система уровней</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!bio</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!bio (текст) | Биография будет указана в s!rank</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">rank<span> - Уровень, опыт, биография</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(155, 88, 0);">Система уровней</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!rank</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!rank @упоминание</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">olesya<span> - Олеся, мемный персонаж бота</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(255, 74, 74);">Развлечение</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!olesya</p>
+                <h4 style="color: #cccccc;">Подробнее:</h4>
+                <p>Мемов больше не будет, Олеся потерялась, добавляй бота на сервер если жалко.</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">say<span> - Написать с имени бота</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(255, 74, 74);">Развлечение, требуются права администратора</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!say</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!say (текст)</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">anime<span> - Найти аниме</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(255, 74, 74);">Развлечение</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!anime</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!anime (название аниме на английском)</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">among<span> - Амогус</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(255, 74, 74);">Развлечение</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!among</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!among @упоминание</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">ship<span> - Шип</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(255, 74, 74);">Развлечение</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!ship</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!ship или s!ship @упоминание или s!ship @упоминание1 @упоминание2</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">duel<span> - Дуэли</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(255, 47, 10);">Мини-игры</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!duel</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!duel (игра с ботом) или s!duel @упоминание | <a href="https://alexcittenq.gitbook.io/isovbotdocs/ispolzovanie/mini-games">полная документация</a></p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">ttt<span> - Крестики-Нолики</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(255, 47, 10);">Мини-игры</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!ttt</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!ttt (игра с ботом) или s!ttt @упоминание | <a href="https://alexcittenq.gitbook.io/isovbotdocs/ispolzovanie/mini-games">полная документация</a></p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">minesweeper<span> - Сапёр</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(255, 47, 10);">Мини-игры</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!minesweeper</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!minesweeper 10 10 10 | <a href="https://alexcittenq.gitbook.io/isovbotdocs/ispolzovanie/mini-games">полная документация</a></p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">rps<span> - Камень, ножницы, бумага!</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(255, 47, 10);">Мини-игры</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!rps</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!rps или s!rps @упоминание | <a href="https://alexcittenq.gitbook.io/isovbotdocs/ispolzovanie/mini-games">полная документация</a></p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">hug<span> - Обнимашки!</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(124, 0, 31);">RolePlay</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!hug</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!hug @упоминание</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">kiss<span> - Поцеловать пользователя</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(124, 0, 31);">RolePlay</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!kiss</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!kiss @упоминание</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">hug<span> - Обнимашки!</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(124, 0, 31);">RolePlay</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!hug</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!hug @упоминание</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">lick<span> - Лизнуть пользователя</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(124, 0, 31);">RolePlay</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!lick</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!lick @упоминание</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">tickle<span> - Щекотка!</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(124, 0, 31);">RolePlay</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!tickle</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!tickle @упоминание</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">cuddle<span> - Пощекотать пользователя </span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(124, 0, 31);">RolePlay</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!cuddle</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!cuddle @упоминание</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">pat<span> - Погладить пользователя</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(124, 0, 31);">RolePlay</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!pat</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!pat @упоминание</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">slap<span> - Шлёпнуть пользователя</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(124, 0, 31);">RolePlay</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!slap</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!slap @упоминание</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">cry<span> - Поплакать</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(124, 0, 31);">RolePlay</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!cry</p>
+                <h4 style="color: #cccccc;">Подробнее:</h4>
+                <p>s!cry | Американцы: don't cry bro(( <br> Русские: чо срёшь</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">dance<span> - Танцевать</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(124, 0, 31);">RolePlay</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!dance</p>
+                <h4 style="color: #cccccc;">Подробнее:</h4>
+                <p>s!dance | Но если вы будете танцевать под песню Washing Machine Heart то вам нужна команда s!cry</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">feed<span> - Покормить пользователя</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(124, 0, 31);">RolePlay</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!feed</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!feed @упоминание</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">purr<span> - Помурчать</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(124, 0, 31);">RolePlay</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!purr</p>
+                <h4 style="color: #cccccc;">Подробнее:</h4>
+                <p>s!purr | Д-дай мне свой дискордик! Д-дискордик.. Я хочу тебе помурчать, вот так беспойно, а м-можно? М-можно мы вместе помурчим, вот так, мяу! Мяяяуу МЯЯЯЯЯЯЯЯЯЯУУУ МММММЯЯЯУУУУУУХАЫВАХЫВ</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">weather<span> - Показывает погоду в городе</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(0, 124, 27);">Другое</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!weather</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!weather (название города)</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">qrcode<span> - Создание QR-кодов</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(0, 124, 27);">Другое</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!qrcode</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!qrcode (текст на английском обязательно!)</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">embed<span> - Создать эмбед</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(0, 124, 27);">Другое</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!embed</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!embed (текст)</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">vote<span> - Создание голосования</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(0, 124, 27);">Другое, нужны права администратора</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!vote</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!vote (текст)</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">dis<span> - Показывает доступных людей с указанным тегом</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(0, 124, 27);">Другое</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!dis</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!dis (тег)</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">zalgo<span> - Превращает ваш текст в ZALGO-текст</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(0, 124, 27);">Другое, нужны права администратора</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!zalgo</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!zalgo (текст)</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">user<span> - Информация о пользователе</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(0, 124, 27);">Другое</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!user</p>
+                <h4 style="color: #cccccc;">Пример:</h4>
+                <p>s!user @упоминание или s!user</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">serverinfo<span> - Информация о сервере</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(0, 124, 27);">Другое</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!serverinfo</p>
+                <h4 style="color: #cccccc;">Подробнее:</h4>
+                <p>s!serverinfo | Представьте что здесь что-то очень трогательное и удивительное, сделайте удивленное лицо а потом серьезное.</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">invite<span> - <a href="https://discord.com/oauth2/authorize?client_id=631868778074079245&guild_id=&scope=bot&permissions=8">Пригласить бота на вечеринку</a></span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(0, 124, 27);">Другое</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!invite</p>
+                <h4 style="color: #cccccc;">Подробнее:</h4>
+                <p>s!invite | Тот кто не приглашает бота тому легендарки в бравл старс не падают.</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">botinfo<span> - Информация о боте</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(0, 124, 27);">Другое</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!botinfo</p>
+                <h4 style="color: #cccccc;">Подробнее:</h4>
+                <p>s!botinfo | Ещё раз представьте что здесь что-то очень трогательное и удивительное, сделайте удивленное лицо а потом серьезное.</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">creators<span> - Легенды бота.</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(0, 124, 27);">Другое</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!creators</p>
+                <h4 style="color: #cccccc;">Подробнее:</h4>
+                <p>s!creators | Ну ради них и своей мамы можно же <a href="https://discord.com/oauth2/authorize?client_id=631868778074079245&guild_id=&scope=bot&permissions=8">добавить бота</a> на сервер?</p>
+            </div>
+            <br>
+            <br>
+            <button type="button" class="collapsible">ping<span> - Пинг-понг!</span></button>
+            <div class="content">
+                <h4 style="color: rgb(169, 247, 247);">Категория:</h4>
+                <p style="color: rgb(0, 124, 27);">Другое</p>
+                <h4 style="color: #cccccc;">Использование:</h4>
+                <p>s!ping</p>
+                <h4 style="color: #cccccc;">Подробнее:</h4>
+                <p>s!ping | Ещё раз можешь же ради разработчиков бота и своей мамы <a href="https://discord.com/oauth2/authorize?client_id=631868778074079245&guild_id=&scope=bot&permissions=8">добавить бота</a> на сервер?</p>
+            </div>
+            <br>
+            <br>
+        </div>
+    </div>
+    </div>
+
+    <footer class="mastfoot mb-auto">
+            <div class="container-fluid mb-auto">
+                <div class="row d-flex justify-content-center">
+                    <div class="">
+                        <p style="font-size: 19px; padding: 0px; margin: 0px;"><a href="https://github.com/Alexcitten"
+                                style="text-decoration: none; color: white;">iSovBot by Alexcitten#0001</a></br>iSovBot ©
+                            2022. All
+                            rights reserved.</br>[<a href="./license.html"><b>ToS Interserver</b></a>]</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="../js/main.js"></script>
+</body>
+
+</html>
